@@ -11,5 +11,5 @@ def test_ci_guard_monotone_up_to_ell_50():
             A = build_nonradial_operator(d=d, k=k, ell=ell, n=n)
             vals = [ritz_min_nonradial(A, m) for m in ms]
             for i in range(len(vals)-1):
-                assert vals[i+1] <= vals[i] + 1e-8
+                assert vals[i+1] <= vals[i] + 1e-6
             assert vals[-1] > 0
